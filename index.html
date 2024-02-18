@@ -46,7 +46,7 @@
                 <li><a>Search</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl">P-Ticket</a>
+            <p class="text-xl">P-Ticket</p>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
@@ -71,7 +71,7 @@
         class="bg-[url(./images/banner.png)] bg-no-repeat bg-cover w-full h-[300px] lg:h-[800px] rounded-[32px]"
       >
         <div
-          class="border flex flex-col justify-center items-center h-[90%] space-y-5"
+          class="flex flex-col justify-center items-center h-[90%] space-y-5"
         >
           <h1
             class="text-white lg:w-[800px] lg:text-7xl text-center font-extrabold"
@@ -89,7 +89,9 @@
           </button>
         </div>
         <!-- card start  -->
-        <div class="border flex space-x-5 justify-center items-center">
+        <div
+          class="flex lg:flex-row flex-col space-x-5 lg:space-y-0 space-y-8 justify-center items-center lg:mt-0 mt-12"
+        >
           <!-- 1st card -->
           <div class="card w-[308px] bg-base-100 shadow-xl">
             <div class="card-body flex flex-row rounded-l-2xl space-x-8">
@@ -125,11 +127,15 @@
       </div>
     </section>
     <!-- Best offers for you section -->
-    <section class="container mx-auto lg:mt-[180px]">
-      <h1 class="font-bold text-5xl text-center">Best offers for you</h1>
-      <div class="flex flex-row space-x-[80px] justify-center space-y-10">
+    <section class="container mx-auto lg:mt-[180px] mt-[600px]">
+      <h1 class="font-bold lg:text-5xl text-center">Best offers for you</h1>
+      <div
+        class="flex lg:flex-row flex-col space-x-[80px] justify-center space-y-10"
+      >
         <div class="flex mt-8">
-          <div class="bg-[#FFBF0F] w-full p-8 rounded-l-[16px]">
+          <div
+            class="bg-[#FFBF0F] lg:w-[400px] p-8 rounded-l-[16px] ml-10 lg:ml-0"
+          >
             <p
               class="flex flex-col justify-center items-center space-y-0 h-[100%]"
             >
@@ -147,8 +153,8 @@
           </div>
         </div>
         <!-- 2 -->
-        <div class="flex mt-8">
-          <div class="bg-[#F78C9C] w-auto p-8 rounded-l-[16px]">
+        <div class="flex lg:flex-row mt-8">
+          <div class="bg-[#F78C9C] lg:w-[400px] p-8 rounded-l-[16px]">
             <p
               class="flex flex-col justify-center items-center space-y-0 h-[100%]"
             >
@@ -159,9 +165,9 @@
           </div>
           <img class="bg-[#F78C9C]" src="./images/cupon-devider.png" alt="" />
           <div
-            class="bg-[#F78C9C] w-[40%] p-8 flex items-center flex-col justify-center rounded-r-[16px]"
+            class="bg-[#F78C9C] w-[40%] p-8 flex items-center flex-col justify-center rounded-r-[16px] mr-5 lg:mr-0"
           >
-            <span class="font-bold text-3xl">Couple20</span>
+            <span class="font-bold text-3xl">Couple 20</span>
             <span class="font-extralight">Coupon Code</span>
           </div>
         </div>
@@ -174,5 +180,285 @@
         </button>
       </div>
     </section>
+    <!-- P.H Paribahan start -->
+    <section class="bg-[#F7F8F8] mt-20 rounded-t-[88px]">
+      <div>
+        <div
+          class="flex flex-col justify-center items-center p-[120px] space-y-8"
+        >
+          <h1 class="font-bold text-5xl">P.H Paribahan</h1>
+          <p class="text-[18px] text-[#03071299]">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+      </div>
+      <!-- ph rout -->
+      <div>
+        <div class="container mx-auto flex mt-8">
+          <div
+            class="bg-[#FFFFFF] lg:w-full p-8 rounded-l-[16px] ml-10 lg:ml-0"
+          >
+            <div class="flex flex-row space-x-2 justify-between mt-5">
+              <div class="flex flex-row space-x-2">
+                <img src="./images/bus-logo.png" alt="" />
+                <div>
+                  <h1>Greenline Paribahan</h1>
+                  <h1>Coach-009-WEB ! AC_Business</h1>
+                </div>
+              </div>
+
+              <div class="navbar-end flex justify-end">
+                <a class="btn bg-[#1DD1001A]"
+                  ><img
+                    class="text-sm text-[#1DD100]"
+                    src="./images/seat-gray.png"
+                    alt=""
+                  /><span class="text-[#1DD100]">40 Seats left</span>
+                </a>
+              </div>
+            </div>
+            <div class="bg-[#F7F8F8] mt-5 rounded-[20px]">
+              <div class="flex justify-between p-4 border-b-2 border-dashed">
+                <p>Route</p>
+                <p>Dhaka - Sylhet</p>
+              </div>
+              <div class="flex justify-between p-4 border-b-2 border-dashed">
+                <p>Departure Time</p>
+                <p>9:00 PM</p>
+              </div>
+              <div class="flex justify-between p-4">
+                <button class="bg-[#0307120D] p-3 rounded-lg">
+                  Boarding Point - Laxmipur
+                </button>
+                <button class="bg-[#0307120D] p-3 rounded-lg">
+                  Dropping Point - Bogura
+                </button>
+                <button class="bg-[#0307120D] p-3 rounded-lg">
+                  Est. Time - 11 Hour
+                </button>
+              </div>
+            </div>
+          </div>
+          <img class="bg-[#FFFFFF]" src="./images/info-devider.png" alt="" />
+          <div
+            class="bg-[#FFFFFF] w-[40%] p-8 flex items-center flex-col justify-center rounded-r-[16px] space-y-4"
+          >
+            <img class="" src="./images/fare.png" alt="" />
+            <span class="font-bold text-3xl">550 Taka</span>
+            <span class="font-extralight">Per Seat</span>
+          </div>
+        </div>
+      </div>
+      <!-- Select Your Seat start -->
+      <div>
+        <div
+          class="grid grid-cols-8 container mx-auto bg-white mt-10 rounded-[20px] p-10"
+        >
+          <!-- left div -->
+          <div class="col-span-5 border-r-2 border-dashed">
+            <div
+              class="col-span-5 text-2xl font-semibold p-8 border-b-2 border-dashed w-[98%]"
+            >
+              Select Your Seat
+            </div>
+            <div
+              class="w-[98%] col-span-5 flex justify-between border-b-2 border-dashed p-8"
+            >
+              <div class="flex flex-row flex-1 p-4">
+                <img src="./images/seat-gray.png" alt="" />
+                <p>Available</p>
+              </div>
+              <div class="flex flex-row items-center">
+                <img
+                  class="w-6 h-6"
+                  src="./images/seat-green-filled.png"
+                  alt=""
+                />
+                <p>Selected</p>
+              </div>
+            </div>
+            <div class="col-span-5 flex justify-end p-4">
+              <img src="./images/Group 56.svg" alt="" />
+            </div>
+            <!-- main seat -->
+            <div class="space-y-8">
+              <div class="flex justify-center items-center space-x-[200px]">
+                <!-- left seat -->
+                <div class="col-span-3 flex justify-between space-x-3">
+                  <div
+                    class="col-span-1 p-4 rounded-lg text-center w-[50px] h-[50px]"
+                  >
+                    <p>A</p>
+                  </div>
+                  <div
+                    class="col-span-1 bg-[#F7F8F8] p-4 w-[120px] h-[60px] rounded-lg text-center"
+                  >
+                    <p>A1</p>
+                  </div>
+                  <div
+                    class="col-span-1 bg-[#F7F8F8] p-4 w-[120px] h-[60px] rounded-lg text-center"
+                  >
+                    <span>A2</span>
+                  </div>
+                </div>
+                <!-- left seat end-->
+                <!-- right seat  -->
+                <div
+                  class="col-span-2 flex float-start justify-between space-x-3"
+                >
+                  <div
+                    class="col-span-1 bg-[#F7F8F8] p-4 w-[120px] h-[60px] rounded-lg text-center"
+                  >
+                    <p>A3</p>
+                  </div>
+                  <div
+                    class="col-span-1 bg-[#F7F8F8] p-4 w-[120px] h-[60px] rounded-lg text-center"
+                  >
+                    <p>A4</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center items-center space-x-[200px]">
+                <!-- left seat -->
+                <div class="col-span-3 flex justify-between space-x-3">
+                  <div
+                    class="col-span-1 p-4 rounded-lg text-center w-[50px] h-[50px]"
+                  >
+                    <p>A</p>
+                  </div>
+                  <div
+                    class="col-span-1 bg-[#F7F8F8] p-4 w-[120px] h-[60px] rounded-lg text-center"
+                  >
+                    <p>A1</p>
+                  </div>
+                  <div
+                    class="col-span-1 bg-[#F7F8F8] p-4 w-[120px] h-[60px] rounded-lg text-center"
+                  >
+                    <span>A2</span>
+                  </div>
+                </div>
+                <!-- left seat end-->
+                <!-- right seat  -->
+                <div
+                  class="col-span-2 flex float-start justify-between space-x-3"
+                >
+                  <div
+                    class="col-span-1 bg-[#F7F8F8] p-4 w-[120px] h-[60px] rounded-lg text-center"
+                  >
+                    <p>A3</p>
+                  </div>
+                  <div
+                    class="col-span-1 bg-[#F7F8F8] p-4 w-[120px] h-[60px] rounded-lg text-center"
+                  >
+                    <p>A4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right div  -->
+          <div class="col-span-3 p-6">
+            <div class="text-2xl font-semibold border-b-2 border-dashed p-6">
+              <p>Select Your Seat</p>
+            </div>
+            <div class="bg-[#F7F8F8] mt-5 rounded-[20px]">
+              <div class="flex justify-between p-4 border-b-2 border-dashed">
+                <div class="flex space-x-1">
+                  <p>Seat</p>
+                  <p class="bg-[#1DD100] w-8 text-center rounded-full">2</p>
+                </div>
+                <p>class</p>
+                <p>Price</p>
+              </div>
+              <div class="flex justify-between p-4 border-b-2">
+                <p>C1</p>
+                <p>Economy</p>
+                <p>550</p>
+              </div>
+              <div class="flex justify-between p-4">
+                <p>Total Price</p>
+                <p>550</p>
+              </div>
+              <div class="flex justify-between p-4">
+                <label class="input input-bordered flex items-center gap-2">
+                  <input
+                    type="text"
+                    class="grow w-[370px]"
+                    placeholder="Have any copupon?"
+                  />
+                  <button class="bg-[#1DD100] h-[40px] w-[60px] p-2 rounded-lg">
+                    Apply
+                  </button>
+                </label>
+              </div>
+              <div class="flex justify-between p-4">
+                <p>Grand Total</p>
+                <p>550</p>
+              </div>
+            </div>
+            <!-- form -->
+            <form action="">
+              <div
+                class="mt-10 space-y-3 flex flex-col justify-center items-center"
+              >
+                <label class="form-control">
+                  <div class="label">
+                    <span class="label-text font-semibold text-xs"
+                      >Inter Your Name*</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    class="input input-bordered w-[450px]"
+                  />
+                </label>
+                <label class="form-control">
+                  <div class="label">
+                    <span class="label-text font-semibold text-xs"
+                      >Phone Number*</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Enter your phone number"
+                    class="input input-bordered w-[450px]"
+                  />
+                </label>
+                <label class="form-control">
+                  <div class="label">
+                    <span class="label-text font-semibold text-xs"
+                      >Email ID*</span
+                    >
+                  </div>
+                  <input
+                    type="email"
+                    placeholder="Enter your email id"
+                    class="input input-bordered w-[450px]"
+                  />
+                </label>
+                <div class="flex justify-center items-center mt-20">
+                  <button
+                    class="btn bg-[#1DD100] text-white w-[450px]"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="mt-5">
+              <div class="flex justify-around underline">
+                <a href="">Terms and Conditions</a>
+                <a href="">Cancellation Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Select Your Seat end -->
+    </section>
+    <!-- P.H Paribahan End -->
   </body>
 </html>
