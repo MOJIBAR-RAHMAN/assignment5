@@ -100,7 +100,7 @@ phoneNumber.addEventListener("keyup", function (e) {
   const value = Number(e.currentTarget.value);
 
   console.log(value.length);
-  if (value > 0) {
+  if (value > 0 && count===1) {
     nextBtn.disabled = false;
   } else {
     nextBtn.disabled = true;
