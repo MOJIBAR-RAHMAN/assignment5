@@ -78,11 +78,15 @@ cpBtn.addEventListener("click", function () {
 
     m.innerText = `Discount Price`;
     n.innerText = `${discount}`;
-
     grantTotal.innerText = `${totalPrice - discount}`;
   } else if (newInput === "couple20") {
     cpId.classList.add("hidden");
     let discount = totalPrice * 0.2;
+    let m = document.getElementById("disp1");
+    let n = document.getElementById("disp2");
+
+    m.innerText = `Discount Price`;
+    n.innerText = `${discount}`;
     grantTotal.innerText = `${totalPrice - discount}`;
   } else {
     alert("please provide valid coupon code");
