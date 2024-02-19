@@ -115,3 +115,8 @@ nextBtn.addEventListener("click", function () {
   modal.classList.remove("hidden");
   footer.classList.add("hidden");
 });
+
+const continueButton = document.getElementById("continue-button");
+continueButton.addEventListener('click', function () {
+  window.location.reload();
+})
