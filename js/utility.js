@@ -18,3 +18,4 @@ function setInnertextById(elementId, value) {
   const element = document.getElementById(elementId);
   element.innerText = value;
 }
+

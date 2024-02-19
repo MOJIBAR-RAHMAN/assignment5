@@ -1,7 +1,6 @@
 const allCard = document.getElementsByClassName("card");
 let count = 0;
 let totalPrice = 0;
-let array = [];
 
 for (const card of allCard) {
   card.addEventListener("click", function (e) {
@@ -11,16 +10,17 @@ for (const card of allCard) {
 
     card.classList.add("bg-green-400");
     count++;
+
     const a1 = e.target.innerText;
-
     setInnertextById("count-update", count);
-
-    array.push(a1);
-
-    console.log(array);
-
+    const initialSeat = getInnerTextNumberById("initial-seat");
+    let updatedSeat = initialSeat - 1;
+    setInnertextById("initial-seat", updatedSeat);
+    if (updatedSeat <= 0) {
+      alert("No seat Available");
+    }
+    
     var seatFare = getInnerTextNumberById("seat-fare");
-
     const x = document.getElementById("p1");
     const y = document.getElementById("p2");
     const z = document.getElementById("p3");
@@ -30,6 +30,7 @@ for (const card of allCard) {
     p1.innerText = `${a1}`;
     p2.innerText = `ecomony`;
     p3.innerText = `${seatFare}`;
+    
     x.appendChild(p1);
     y.appendChild(p2);
     z.appendChild(p3);
@@ -39,22 +40,14 @@ for (const card of allCard) {
     totalPrice += price;
     setInnertextById("total-price", totalPrice);
 
-    const initialSeat = getInnerTextNumberById("initial-seat");
-    let updatedSeat = initialSeat - 1;
-    setInnertextById("initial-seat", updatedSeat);
-    if (updatedSeat <= 0) {
-      alert("No seat Available");
-    }
+    
+
     setInnertextById("update-seat", a1);
 
     // coupon btn
     const cpBtn = document.getElementById("cp-btn");
 
-    if (count >= 4) {
-      cpBtn.disabled = false;
-    } else {
-      cpBtn.disabled = true;
-    }
+   
   });
 }
 
@@ -64,12 +57,11 @@ const input = document.getElementById("cp-input");
 input.addEventListener("keyup", function (e) {
   console.log();
   const value = e.currentTarget.value.split(" ").join("").toLowerCase();
-  if (value === 'new15' || value === 'couple20') {
+  if (value === "new15" || value === "couple20") {
     cpBtn.disabled = false;
   } else {
     cpBtn.disabled = true;
   }
-  
 });
 
 cpBtn.addEventListener("click", function () {
@@ -101,11 +93,13 @@ cpBtn.addEventListener("click", function () {
 const nextBtn = document.getElementById("next-btn");
 const phoneNumber = document.getElementById("phone-number");
 phoneNumber.addEventListener("keyup", function (e) {
-  const value = e.currentTarget.value;
-  if (value === "") {
-    nextBtn.disabled = true;
-  } else {
+  const value = Number(e.currentTarget.value);
+
+  console.log(value.length);
+  if (value > 0) {
     nextBtn.disabled = false;
+  } else {
+    nextBtn.disabled = true;
   }
 });
 
@@ -115,4 +109,5 @@ nextBtn.addEventListener("click", function () {
 
   main.classList.add("hidden");
   modal.classList.remove("hidden");
+  footer.classList.add("hidden");
 });
