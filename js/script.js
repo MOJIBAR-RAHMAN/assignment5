@@ -1,10 +1,9 @@
 const allCard = document.getElementsByClassName("card");
 let count = 0;
 let totalPrice = 0;
+let array = [];
 
 for (const card of allCard) {
-  // console.log(card);
-  const array = [];
   card.addEventListener("click", function (e) {
     if (count === 4) {
       card.classList.add("disabled:opacity-75 ...");
@@ -16,17 +15,11 @@ for (const card of allCard) {
 
     setInnertextById("count-update", count);
 
-    // array.push(a1);
-    // console.log(a1);
-    // if (array.includs(a1) === true) {
-    //   card.setAttribute("disabled");
-    // }
+    array.push(a1);
 
     console.log(array);
 
     var seatFare = getInnerTextNumberById("seat-fare");
-    // const totalPrice = getInnerTextNumberById("total-price");
-    // console.log(seatFare);
 
     const x = document.getElementById("p1");
     const y = document.getElementById("p2");
@@ -44,7 +37,6 @@ for (const card of allCard) {
     // total price
     let price = parseFloat(p3.innerText);
     totalPrice += price;
-    // console.log(totalPrice);
     setInnertextById("total-price", totalPrice);
 
     const initialSeat = getInnerTextNumberById("initial-seat");
@@ -67,16 +59,25 @@ for (const card of allCard) {
 }
 
 // coupon
-// const coupon = getInnerTextById('coupon1').toLocaleLowerCase();
-
 const cpBtn = document.getElementById("cp-btn");
+const input = document.getElementById("cp-input");
+input.addEventListener("keyup", function (e) {
+  console.log();
+  const value = e.currentTarget.value.split(" ").join("").toLowerCase();
+  if (value === 'new15' || value === 'couple20') {
+    cpBtn.disabled = false;
+  } else {
+    cpBtn.disabled = true;
+  }
+  
+});
+
 cpBtn.addEventListener("click", function () {
   const grantTotal = document.getElementById("grand-total");
   const cpId = document.getElementById("cp-id");
-  console.log(cpId);
   const cpInput = document.getElementById("cp-input").value.split(" ").join("");
   const newInput = cpInput.toLowerCase();
-  // console.log(newInput);
+
   if (newInput === "new15") {
     cpId.classList.add("hidden");
     let discount = totalPrice * 0.15;
@@ -85,11 +86,8 @@ cpBtn.addEventListener("click", function () {
 
     m.innerText = `Discount Price`;
     n.innerText = `${discount}`;
-    // const discountContainer = document.getElementById('discount-container');
-    // discountContainer.appendChild(p1)
-    // discountContainer.appendChild(p2)
+
     grantTotal.innerText = `${totalPrice - discount}`;
-    // console.log(discount);
   } else if (newInput === "couple20") {
     cpId.classList.add("hidden");
     let discount = totalPrice * 0.2;
@@ -114,10 +112,7 @@ phoneNumber.addEventListener("keyup", function (e) {
 nextBtn.addEventListener("click", function () {
   const main = document.getElementById("main-div");
   const modal = document.getElementById("modal");
-  // console.log(main);
-  // console.log(modal);
+
   main.classList.add("hidden");
   modal.classList.remove("hidden");
 });
-
-// console.log(nextBtn);
