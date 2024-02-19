@@ -54,15 +54,15 @@ for (const card of allCard) {
 // coupon
 const cpBtn = document.getElementById("cp-btn");
 const input = document.getElementById("cp-input");
-input.addEventListener("keyup", function (e) {
-  console.log();
-  const value = e.currentTarget.value.split(" ").join("").toLowerCase();
-  if (value === "new15" || value === "couple20") {
-    cpBtn.disabled = false;
-  } else {
-    cpBtn.disabled = true;
-  }
-});
+// input.addEventListener("keyup", function (e) {
+//   console.log();
+//   const value = e.currentTarget.value.split(" ").join("").toLowerCase();
+//   if (value === "new15" || value === "couple20") {
+//     cpBtn.disabled = false;
+//   } else {
+//     cpBtn.disabled = true;
+//   }
+// });
 
 cpBtn.addEventListener("click", function () {
   const grantTotal = document.getElementById("grand-total");
@@ -92,6 +92,19 @@ cpBtn.addEventListener("click", function () {
     alert("please provide valid coupon code");
   }
 });
+const cpButton = document.getElementById("cp-btn");
+const inputField = document.getElementById("cp-input");
+inputField.addEventListener("keyup", function (e) {
+  console.log();
+  const x = e.currentTarget.value.split(" ").join("").toLowerCase();
+  if ((x === "new15" || x === "couple20") && count===4) {
+    cpBtn.disabled = false;
+  } else {
+    cpBtn.disabled = true;
+  }
+});
+
+
 
 // modal on
 const nextBtn = document.getElementById("next-btn");
